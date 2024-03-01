@@ -1,0 +1,80 @@
+:root {
+    --min-font-size: 10px;
+    --max-font-size: 16px;
+    display:flex;
+    flex-direction: column;
+  
+}
+
+.btn-primary {
+    background-color: #000000d4;
+}
+.container-fluid {
+    background-color: rgba(161, 155, 160, 0.681);
+    padding-top: 40px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; 
+    min-height: 100vh; 
+}
+
+.heading {
+    font-size: 50px;
+    margin-bottom: 30px;
+    margin-top: 20px; 
+    text-align: center;
+}
+
+.student-container {
+    background-color: rgba(219, 213, 217, 0.377);
+}
+
+.student-box {
+    font-size: 10px;
+    background-color: aliceblue;
+    border: 1px solid #000000; 
+    padding: 10px;
+    margin-bottom: 20px; 
+    margin-top: 20px; 
+    justify-content: space-between;
+    align-items: left;
+    word-wrap: break-word;
+     overflow-wrap: break-word; 
+     position: relative;
+}
+
+.delete-btn{
+    background-color: rgb(233, 76, 28);
+    color: white;
+    display: none;
+   
+}
+
+.edit-btn{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    display: none;
+   
+}
+
+.student-box:hover .delete-btn{
+    display: inline-block;
+    position: relative;
+  
+    
+   
+   
+}
+
+.student-box:hover .edit-btn{
+    display: inline-block;
+    position: relative;
+   
+}
+
+
+.student-box:hover {
+    background-color: rgb(221, 230, 229);
+}

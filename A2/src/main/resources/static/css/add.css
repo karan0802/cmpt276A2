@@ -1,0 +1,20 @@
+:root{
+    background-color: rgba(154, 207, 223, 0.445);
+}
+
+.btn-primary{
+    width: auto;
+    background-color: #000000d4;
+}
+
+.container-fluid {
+    background-color: rgba(193, 194, 196, 0.681);
+}
+
+#dob, #name, #height, #weight, #hairColor,#gpa {
+    background-color: white;
+    border-color: rgb(55, 132, 219);
+    border-width: 2px;
+
+
+}

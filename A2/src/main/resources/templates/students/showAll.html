@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="/css/home.css" rel="stylesheet">
+
+</head>
+<body>
+        <main class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="heading">
+                    <h1>Welcome To Student Management</h1>
+                </div>
+                <div class="col-md-3 text-center">
+                    <a href="/add" class="btn btn-primary mb-3">Add a New Student</a>
+                </div>
+                    <div class="student-container">
+                        <div class = "row">       
+                            <div th:each="student : ${stud}" class="col-sm-6 col-md-3 mb-4">
+                                <div class="student-box p-3 " th:data-id="${student.uid}" th:style="'height:' + ${student.height} + 'px; width:' + ${student.weight} + 'px;'">
+                                    <span th:style="'color:' + ${student.hairColor}" th:text="${student.name}"></span>
+                                    <span th:text="'GPA: ' + ${student.gpa}"></span>
+                                    <div>
+                                        <a th:href="@{/student/update/{id}(id=${student.uid})}" class="btn edit-btn btn-sm">Edit</a> <br>
+                                        <a th:href="@{/student/delete/{id}(id=${student.uid})}" class="btn delete-btn btn-sm" onclick="return confirm('Are you sure?')">Delete</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </main>
+</body>
+</html>
